@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="flatwhitebuystyle.css">
+</head>
+<header>
+  <div class="top-header">
+    <h1 class="logo">BARISTA</h1>
+
+    
+    <div class="hamburger" onclick="toggleMenu()">
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+    <nav class="navbar">
+      <ul class="nav-menu">
+        <li class="dropdown">
+          <a href="cafe.html" class="active">Home</a>
+        </li>
+
+        <li class="dropdown">
+          <a href="dashboardcafe.html">Menu</a>
+        </li>
+
+        <li class="dropdown">
+          <a href="reservation.html">Reservation</a>
+        </li>
+
+        <li class="dropdown">
+          <a href="blogs.html">Blogs</a>
+        </li>
+
+        <li class="dropdown">
+          <a href="elementor.html">Shop</a>
+        </li>
+
+        <li class="dropdown">
+          <a href="about.html">About</a>
+        </li>
+           
+        <li class="dropdown">
+        <a href="cafelogin.html">Login</a>
+        </li>
+
+<!-- 🔍 Search Icon -->
+        <li class="dropdown">
+          <a href="#" onclick="toggleSearchBar(event)">
+            <img src="search-image.png" class="icon" alt="Search Icon" />
+          </a>
+        </li>
+
+        <!-- 🔎 Hidden Search Bar -->
+        <li class="search-bar" id="searchBar" style="display: none;">
+          <input type="text" placeholder="Search here..." />
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<body>
+    <body>
+    <div class="product-container">
+  <div class="product-image">
+    <img src="home-page1.jpg" alt="flatwhite" id="product-img" />
+  </div>
+  <div class="product-details">
+    <h1>flatwhite</h1>
+    <p class="price">$5.7</p>
+    <p class="description">Rich espresso with creamy steamed milk foam. A morning classic.</p>
+ <button onclick="window.location.href='cart.html'"> Buy now</button>
+  </div>
+  </div>
+</div>
+
+<script>
+  function toggleMenu() {
+    const navMenu = document.querySelector(".nav-menu");
+    navMenu.classList.toggle("active");
+  }
+</script>
+
+<script>
+  function toggleSearchBar(event) {
+    event.preventDefault();
+    const searchBar = document.getElementById("searchBar");
+    if (searchBar.style.display === "none" || searchBar.style.display === "") {
+      searchBar.style.display = "inline-block";
+    } else {
+      searchBar.style.display = "none";
+    }
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,393 @@
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.top-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #f4f1e9; 
+  padding: 10px 40px;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+  color: brown;
+  margin: 0;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-menu > li {
+  position: relative;
+}
+
+.nav-menu a {
+  color: black;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 10px 15px;
+  display: block;
+  transition: background 0.3s;
+}
+
+.nav-menu a:hover {
+  background-color:grey;
+  border-radius: 4px;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #444;
+  list-style: none;
+  padding: 10px 0;
+  border-radius: 4px;
+  min-width: 180px;
+  z-index: 999;
+}
+
+.dropdown-menu li a {
+  padding: 10px 20px;
+  color: white;
+  display: block;
+  text-decoration: none;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.nav-icons {
+  display: flex;
+  gap: 20px;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+}
+
+.search-overlay {
+  display: none; 
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.95);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.search-box {
+  position: relative;
+}
+
+.search-box input {
+  padding: 15px 20px;
+  font-size: 24px;
+  width: 400px;
+  max-width: 90%;
+  border: none;
+  border-bottom: 2px solid #c9a17a;
+  outline: none;
+  background: transparent;
+  color: #333;
+  font-style: italic;
+}
+
+.search-box input::placeholder {
+  color: #c9a17a;
+  font-style: italic;
+}
+
+.close-btn {
+  position: absolute;
+  top: -10px;
+  right: -30px;
+  font-size: 40px;
+  color: #c9a17a;
+  cursor: pointer;
+}
+.login-section {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; 
+  background-color: #fff8f0;
+  padding-top: 150px; 
+  margin-top: -40px;
+}
+
+.login-box {
+  background-color: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.login-box h2 {
+  margin-bottom: 25px;
+  color: #5a3e1b;
+}
+
+.login-box form input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.login-box form button {
+  width: 100%;
+  padding: 12px;
+  background-color: #c77b4f;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+    margin-top: 10px;
+
+}
+
+.login-box form button:hover {
+  background-color: #a5643a;
+}
+
+.signup-link {
+  margin-top: 12px;
+  font-size: 14px;
+}
+
+.signup-link a {
+  color: #c77b4f;
+  text-decoration: none;
+}
+.forgot-password{
+    margin-right:-10px;
+
+}
+#endpagecontent {
+  background-color: rgba(0, 0, 0, 0.95);
+  color: white;
+  padding: 50px 40px;
+  border-top: 4px solid orange;
+  width: 100%;
+  margin-top: -70px;
+}
+
+.endpage {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 1400px;
+  margin: auto;
+}
+
+.footer-column {
+  width: 30%;
+}
+
+.footer-column h3 {
+  margin-bottom: 15px;
+  border-bottom: 2px solid orange;
+  padding-bottom: 5px;
+  font-size: 18px;
+  color: #fff;
+}
+
+.footer-column ul {
+  list-style: none;
+}
+
+.footer-column li {
+  margin-bottom: 10px;
+}
+
+.footer-column a {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer-column a:hover {
+  text-decoration: underline;
+}
+.search-bar input[type="text"] {
+  padding: 6px 12px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+}
+
+@media (max-width: 768px) {
+  .top-header,
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 20px;
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .nav-icons {
+    margin-top: 10px;
+    gap: 10px;
+  }
+
+  .search-box input {
+    width: 90%;
+    font-size: 18px;
+  }
+
+  .login-section {
+    padding-top: 160px; /* to prevent overlap with fixed header */
+    padding-left: 20px;
+    padding-right: 20px;
+    align-items: center;
+  }
+
+  .login-box {
+    padding: 25px 20px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 100%;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+
+  .login-box h2 {
+    font-size: 24px;
+  }
+
+  .login-box input,
+  .login-box button {
+    font-size: 16px;
+    padding: 12px;
+  }
+
+  .signup-link,
+  .forgot-password {
+    font-size: 13px;
+    text-align: center;
+  }
+
+  .endpage {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 30px 10px;
+  }
+
+  .footer-column {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 5px;
+  margin-left: auto; /* Pushes it to the right side */
+}
+
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: black;
+  border-radius: 3px;
+  transition: 0.3s ease;
+}
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex; /* show on mobile */
+  }
+
+.nav-menu {
+  display: none;
+  flex-direction: column;
+  width: 100%;
+  background-color: #f4f1e9;
+  padding: 10px 0;
+  align-items: center; /* 🔥 Add this line to center nav items */
+  text-align: center;   /* 🔥 Ensures text is also centered */
+}
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .navbar {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .top-header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo {
+    margin: 10px auto;
+  }
+
+  .hamburger {
+    align-self: flex-end;
+    margin-top: -35px;
+    margin-right: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* ... your other styles ... */
+
+  #endpagecontent {
+    margin-top: 50px; /* 🔥 pehle -70px tha, ab 50px karke neeche le ja rahe hain */
+    padding-top: 40px; /* optional: aur zyada gap chahiye to badha sakte ho */
+  }
+}

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Barista Navigation</title>
+  <link rel="stylesheet" href="elementorstyle.css">
+</head>
+<header>
+  <div class="top-header">
+    <h1 class="logo">BARISTA</h1>
+<div class="hamburger" onclick="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+    <nav class="navbar">
+      <ul class="nav-menu">
+        <li class="dropdown">
+          <a href="cafe.html" class="active">Home</a>
+        </li>
+
+        <li class="dropdown">
+          <a href="dashboardcafe.html">Menu</a>
+        </li>
+
+        <li class="dropdown">
+          <a href="reservation.html">Reservation</a>
+        </li>
+
+        <li class="dropdown">
+          <a href="blogs.html">Blogs</a>
+        </li>
+
+        <li class="dropdown">
+          <a href="elementor.html">Shop</a>
+        </li>
+
+        <li class="dropdown">
+          <a href="about.html">About</a>
+        </li>
+           
+        <li class="dropdown">
+        <a href="cafelogin.html">Login</a>
+        </li>
+
+<!-- 🔍 Search Icon -->
+        <li class="dropdown">
+          <a href="#" onclick="toggleSearchBar(event)">
+            <img src="search-image.png" class="icon" alt="Search Icon" />
+          </a>
+        </li>
+
+        <!-- 🔎 Hidden Search Bar -->
+        <li class="search-bar" id="searchBar" style="display: none;">
+          <input type="text" placeholder="Search here..." />
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+   <div class="container">
+  <div class="prodname">
+    <img src="coffee-img1.jpg" alt="Cappuccino">
+    <p>Cappuccino <br> 4$</p>
+    <input type="submit" value="VIEW"  onclick="window.location.href='cappuccino.html?name=Cappuccino&price=4$&img=coffee-img1.jpg'">
+  </div>
+
+  <div class="prodname">
+    <img src="coffee-image2.jpg" alt="Latte">
+    <p>Latte  <br> 3.12$</p>
+    <input type="submit" value="VIEW" onclick="window.location.href='latte.html?name=latte&price=3.2$&img=coffee-image2.jpg'">
+  </div>
+
+  <div class="prodname">
+    <img src="coffee-img3.jpg" alt="Espresso">
+    <p>Espresso <br> 3.14$</p>
+    <input type="submit" value="VIEW" onclick="window.location.href='espresso.html?name=Espresso&price=3.2$&img=coffee-img3.jpg'">
+  </div>
+
+  <div class="prodname">
+    <img src="coffee-image4.jpg" alt="Mocha">
+    <p>Mocha <br> 3.19$</p>
+    <input type="submit" value="VIEW" onclick="window.location.href='mocha.html?name=Mocha&price=3.2$&img=coffee-image4.jpg'">
+  </div>
+
+  <div class="prodname">
+    <img src="coffee-image5.jpg" alt="Macchiato">
+    <p>Macchiato <br> 3.49$</p>
+    <input type="submit" value="VIEW" onclick="window.location.href='macchiato.html?name=Macchiato&price=3.2$&img=coffee-image5.jpg'">
+  </div>
+
+  <div class="prodname">
+    <img src="coffee-image6.jpg" alt="	Americano">
+    <p>	Americano <br> 6$</p>
+    <input type="submit" value="VIEW" onclick="window.location.href='Americano.html?name=Americano&price=3.2$&img=coffee-image6.jpg'">
+  </div>
+
+  <div class="prodname">
+    <img src="coffee-image7.jpg" alt="	FlatWhite">
+    <p>	Flat White <br> 5.2$</p>
+    <input type="submit" value="VIEW" onclick="window.location.href='flatwhite.html?name=flat white&price=3.2$&img=coffee-image7.jpg'">
+  </div>
+
+  
+  <div class="prodname">
+    <img src="home-page8.jpg" alt="IrishCoffee">
+    <p>	Irish Coffee <br> 6$</p>
+    <input type="submit" value="VIEW" onclick="window.location.href='irishcoffee.html?name=Irish Coffee&price=3.2$&img=home-page8.jpg'">
+  </div>
+</div>
+
+<div>
+</body>
+ <footer>
+    <div id="endpagecontent">
+      <div class="endpage">
+        <div class="footer-column">
+          <h3>Customer Care</h3>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms & Conditions</a></li>
+            <li><a href="#">Product Return</a></li>
+            <li><a href="#">Wholesale Policy</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h3>Quick Shop</h3>
+          <ul>
+            <li><a href="#">Pagination</a></li>
+            <li><a href="#">Terms and Conditions</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Accessories</a></li>
+            <li><a href="#">Term of Use</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h3>Company</h3>
+          <ul>
+            <li><a href="#">Help Center</a></li>
+            <li><a href="#">Address Store</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Receivers & Amplifiers</a></li>
+            <li><a href="#">Clothings</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+      
+<script>
+  const hamburger = document.querySelector('.hamburger');
+  const navMenu = document.querySelector('.nav-menu');
+
+  hamburger.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+  });
+</script>
+
+</html>

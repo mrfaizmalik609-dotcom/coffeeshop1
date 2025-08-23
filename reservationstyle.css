@@ -1,0 +1,373 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+    background-color: #fff8f0;
+}
+
+.top-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f4f1e9;
+  padding: 10px 40px;
+  border-bottom: 1px solid #ccc;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+  color: brown;
+  margin: 0;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-menu > li {
+  position: relative;
+}
+
+.nav-menu a {
+  color: black;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 10px 15px;
+  display: block;
+  transition: background 0.3s;
+}
+
+.nav-menu a:hover {
+  background-color:grey;
+  border-radius: 4px;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #444;
+  list-style: none;
+  padding: 10px 0;
+  border-radius: 4px;
+  min-width: 180px;
+  z-index: 999;
+}
+
+.dropdown-menu li a {
+  padding: 10px 20px;
+  color: white;
+  display: block;
+  text-decoration: none;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.nav-icons {
+  display: flex;
+  gap: 20px;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+}
+
+.search-overlay {
+  display: none; 
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.95);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.search-box {
+  position: relative;
+}
+
+.search-box input {
+  padding: 15px 20px;
+  font-size: 24px;
+  width: 400px;
+  max-width: 90%;
+  border: none;
+  border-bottom: 2px solid #c9a17a;
+  outline: none;
+  background: transparent;
+  color: #333;
+  font-style: italic;
+}
+
+.search-box input::placeholder {
+  color: #c9a17a;
+  font-style: italic;
+}
+
+.close-btn {
+  position: absolute;
+  top: -10px;
+  right: -30px;
+  font-size: 40px;
+  color: #c9a17a;
+  cursor: pointer;
+}
+
+
+
+
+.reservation-section {
+  max-width: 600px;
+  margin: 60px auto;
+  padding: 30px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.reservation-section h2 {
+  font-size: 28px;
+  color: #4e342e;
+  margin-bottom: 10px;
+}
+
+.reservation-section p {
+  font-size: 14px;
+  margin-bottom: 20px;
+  color: #666;
+}
+
+.reservation-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.reservation-form input,
+.reservation-form textarea {
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.reservation-form button {
+  padding: 12px;
+  background-color: #6b4f2a;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.reservation-form button:hover {
+  background-color: #543d1e;
+}
+
+#endpagecontent {
+  background-color: rgba(0, 0, 0, 0.95);
+  color: white;
+  padding: 50px 40px;
+  border-top: 4px solid orange;
+  width: 100%;
+  margin-top: 50px;
+}
+
+.endpage {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 1400px;
+  margin: auto;
+}
+
+.footer-column {
+  width: 30%;
+}
+
+.footer-column h3 {
+  margin-bottom: 15px;
+  border-bottom: 2px solid orange;
+  padding-bottom: 5px;
+  font-size: 18px;
+  color: #fff;
+}
+
+.footer-column ul {
+  list-style: none;
+}
+
+.footer-column li {
+  margin-bottom: 10px;
+}
+
+.footer-column a {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer-column a:hover {
+  text-decoration: underline;
+}
+/* ✅ Mobile Responsive Design Without Breaking Desktop */
+
+@media (max-width: 768px) {
+  .top-header,
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    padding: 10px 20px;
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .nav-icons {
+    margin-top: 10px;
+  }
+
+  .reservation-section {
+    width: 90%;
+    margin: 30px auto;
+    padding: 20px;
+  }
+
+  .reservation-section h2 {
+    font-size: 22px;
+  }
+
+  .reservation-section p {
+    font-size: 13px;
+  }
+
+  .reservation-form input,
+  .reservation-form textarea {
+    font-size: 13px;
+  }
+
+  .reservation-form button {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  #endpagecontent {
+    width: 100%;
+    padding: 30px 15px;
+    margin: 30px auto 0;
+  }
+
+  .endpage {
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-column {
+    width: 100%;
+  }
+
+  .footer-column h3 {
+    font-size: 16px;
+  }
+
+  .footer-column a {
+    font-size: 13px;
+  }
+
+  .search-box input {
+    font-size: 18px;
+    width: 90%;
+  }
+
+  .close-btn {
+    font-size: 32px;
+    right: -20px;
+  }
+
+  .logo {
+    font-size: 24px;
+  }
+
+  .nav-menu a {
+    font-size: 15px;
+  }
+}
+
+.search-bar input[type="text"] {
+  padding: 6px 12px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+}
+
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 5px;
+  margin-left: auto; /* Pushes it to the right side */
+}
+
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: black;
+  border-radius: 3px;
+  transition: 0.3s ease;
+}
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex; /* show on mobile */
+  }
+
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #f4f1e9;
+    padding: 10px 0;
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .navbar {
+    width: 100%;
+  }
+}

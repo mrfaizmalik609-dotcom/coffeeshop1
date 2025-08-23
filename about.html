@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="aboutstyle.css">
+</head>
+<header>
+  <div class="top-header">
+    <h1 class="logo">BARISTA</h1>
+<div class="hamburger" onclick="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+    <nav class="navbar">
+      <ul class="nav-menu">
+        <li class="dropdown">
+          <a href="cafe.html" class="active">Home</a>
+        </li>
+
+        <li class="dropdown">
+          <a href="dashboardcafe.html">Menu</a>
+        </li>
+
+        <li class="dropdown">
+          <a href="reservation.html">Reservation</a>
+        </li>
+
+        <li class="dropdown">
+          <a href="blogs.html">Blogs</a>
+        </li>
+
+        <li class="dropdown">
+          <a href="elementor.html">Shop</a>
+        </li>
+
+        <li class="dropdown">
+          <a href="about.html">About</a>
+        </li>
+           
+        <li class="dropdown">
+        <a href="cafelogin.html">Login</a>
+        </li>
+
+<!-- 🔍 Search Icon -->
+        <li class="dropdown">
+          <a href="#" onclick="toggleSearchBar(event)">
+            <img src="search-image.png" class="icon" alt="Search Icon" />
+          </a>
+        </li>
+
+        <!-- 🔎 Hidden Search Bar -->
+        <li class="search-bar" id="searchBar" style="display: none;">
+          <input type="text" placeholder="Search here..." />
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<body>
+<section class="about-section">
+    <div class="about-content">
+      <h2>About Barista Café</h2>
+      <p>
+        Welcome to Barista Café – where passion meets coffee. Our journey began with a simple dream: to serve the perfect cup of coffee in a cozy and relaxing atmosphere. From handcrafted espresso to freshly baked pastries, we bring you the warmth of café culture right in your neighborhood.
+      </p>
+      <p>
+        Whether you're here for a quiet study session or catching up with friends, our café offers the perfect blend of comfort, aroma, and flavor. We source the finest beans, brew with love, and treat every customer like family.
+      </p>
+      <p class="signature">Come sip the experience. ☕</p>
+    </div>
+    <div class="about-image">
+      <img src="interior-cafe.jpg" alt="Barista Café Interior" />
+    </div>
+  </section>
+<body>
+ <footer>
+    <div id="endpagecontent">
+      <div class="endpage">
+        <div class="footer-column">
+          <h3>Customer Care</h3>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms & Conditions</a></li>
+            <li><a href="#">Product Return</a></li>
+            <li><a href="#">Wholesale Policy</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h3>Quick Shop</h3>
+          <ul>
+            <li><a href="#">Pagination</a></li>
+            <li><a href="#">Terms and Conditions</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Accessories</a></li>
+            <li><a href="#">Term of Use</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h3>Company</h3>
+          <ul>
+            <li><a href="#">Help Center</a></li>
+            <li><a href="#">Address Store</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Receivers & Amplifiers</a></li>
+            <li><a href="#">Clothings</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+ <script>
+  function toggleMenu() {
+    const navMenu = document.querySelector(".nav-menu");
+    navMenu.classList.toggle("active");
+  }
+
+  function toggleSearchBar(event) {
+    event.preventDefault();
+    const searchBar = document.getElementById("searchBar");
+    searchBar.style.display =
+      searchBar.style.display === "none" || searchBar.style.display === ""
+        ? "inline-block"
+        : "none";
+  }
+</script>
+</html>

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="cafestyle.css">
+</head>
+<header>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <div class="top-header">
+    <h1 class="logo">BARISTA</h1>
+  <div class="hamburger" onclick="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+    <nav class="navbar">
+      <ul class="nav-menu">
+        <li class="dropdown">
+          <a href="cafe.html" class="active">Home</a>
+        </li>
+
+        <li class="dropdown">
+          <a href="dashboardcafe.html">Menu</a>
+        </li>
+
+        <li class="dropdown">
+          <a href="reservation.html">Reservation</a>
+        </li>
+
+        <li class="dropdown">
+          <a href="blogs.html">Blogs</a>
+        </li>
+
+        <li class="dropdown">
+          <a href="elementor.html">Shop</a>
+        </li>
+
+        <li class="dropdown">
+          <a href="about.html">About</a>
+        </li>
+
+        <li class="dropdown">
+          <a href="cafelogin.html">Login</a>
+        </li>
+
+
+        <li class="dropdown">
+          <a href="#" onclick="toggleSearchBar(event)">
+            <img src="search-image.png" class="icon" alt="Search Icon" />
+          </a>
+        </li>
+
+        <li class="search-bar" id="searchBar" style="display: none;">
+          <input type="text" placeholder="Search here..." />
+        </li>
+      </ul>
+    </nav>
+
+  </div>
+</header>
+
+<body>
+  <div class="text-section">
+    <h1>WELCOME TO BARISTA</h1>
+    <p>"Barista comes with the perfect blend of customizable pages, flexible options, and beautiful elements for your coffee shop website".</p>
+    <br><br>
+   <div class="get-barista">
+  <input type="button" value="GET STARTED" onclick="window.location.href='cafelogin.html'">
+</div>
+
+
+  </div>
+  <div class="container">
+
+  <div class="prodname">
+    <img src="coffee-img1.jpg" alt="Cappuccino">
+    <p>Cappuccino</p>
+    <input type="submit" value="GO TO SHOP" onclick="window.location.href='elementor.html'">
+  </div>
+
+  <div class="prodname">
+    <img src="coffee-image2.jpg" alt="Latte">
+    <p>Latte</p>
+    <input type="submit" value="GO TO SHOP" onclick="window.location.href='elementor.html'">
+  </div>
+
+  <div class="prodname">
+    <img src="coffee-img3.jpg" alt="Espresso">
+    <p>Espresso</p>
+    <input type="submit" value="GO TO SHOP" onclick="window.location.href='elementor.html'">
+  </div>
+
+  <div class="prodname">
+    <img src="coffee-image4.jpg" alt="Mocha">
+    <p>Mocha</p>
+    <input type="submit" value="GO TO SHOP" onclick="window.location.href='elementor.html'">
+  </div>
+
+  <div class="prodname">
+    <img src="coffee-image5.jpg" alt="Macchiato">
+    <p>Macchiato</p>
+    <input type="submit" value="GO TO SHOP" onclick="window.location.href='elementor.html'">
+  </div>
+
+  <div class="prodname">
+    <img src="coffee-image6.jpg" alt="Black Coffee">
+    <p>Black Coffee</p>
+    <input type="submit" value="GO TO SHOP" onclick="window.location.href='elementor.html'">
+  </div>
+
+</div>
+
+<div>
+ <div class="review-section">
+  <h2>What Our Customers Say....</h2>
+
+  <div class="review-card">
+    <img src="image-boy1.jpg" alt="Customer 1">
+    <div class="review-text">
+      <h4>Ali Khan</h4>
+      <p>"The coffee was amazing and the service was top-notch!"</p>
+    </div>
+  </div>
+
+  <div class="review-card">
+    <img src="girl-image 3.jpg" alt="Customer 2">
+    <div class="review-text">
+      <h4>Fatima Malik</h4>
+      <p>"Such a cozy place with great vibes. Loved the cappuccino!"</p>
+    </div>
+  </div>
+
+  <div class="review-card">
+    <img src="image boy-2.jpg" alt="Customer 3">
+    <div class="review-text">
+      <h4>Ahmed Raza</h4>
+      <p>"Best place in town for coffee lovers. Highly recommended!"</p>
+    </div>
+  </div>
+</div>
+
+  <footer>
+    <div id="endpagecontent">
+      <div class="endpage">
+        <div class="footer-column">
+          <h3>Customer Care</h3>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms & Conditions</a></li>
+            <li><a href="#">Product Return</a></li>
+            <li><a href="#">Wholesale Policy</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h3>Quick Shop</h3>
+          <ul>
+            <li><a href="#">Pagination</a></li>
+            <li><a href="#">Terms and Conditions</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Accessories</a></li>
+            <li><a href="#">Term of Use</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h3>Company</h3>
+          <ul>
+            <li><a href="#">Help Center</a></li>
+            <li><a href="#">Address Store</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Receivers & Amplifiers</a></li>
+            <li><a href="#">Clothings</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+<script>
+  function toggleMenu() {
+    const navMenu = document.querySelector(".nav-menu");
+    navMenu.classList.toggle("active");
+  }
+
+  function toggleSearchBar(event) {
+    event.preventDefault();
+    const searchBar = document.getElementById("searchBar");
+    searchBar.style.display =
+      searchBar.style.display === "none" || searchBar.style.display === ""
+        ? "inline-block"
+        : "none";
+  }
+</script>
+
+</body>
+</html>
+
+</body>
+</html>
