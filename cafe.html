@@ -6,6 +6,23 @@
   <title>Barista Coffee</title>
   <link rel="stylesheet" href="cafestyle.css">
   <link rel="icon" type="image/png" href="barista-logo.png">
+  <style>
+    /* Sirf yeh CSS add kiya hai products ke grid ke liye */
+    .container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); /* 1 row me 3 items */
+      gap: 20px; /* thoda space between items */
+      margin-top: 30px;
+    }
+    .prodname {
+      text-align: center;
+    }
+    .prodname img {
+      width: 100%;
+      max-width: 250px; /* image size control */
+      border-radius: 10px;
+    }
+  </style>
 </head>
 <body>
 
@@ -48,6 +65,7 @@
     </div>
   </div>
 
+  <!-- Products Section -->
   <div class="container">
     <div class="prodname">
       <img src="coffee-img1.jpg" alt="Cappuccino">
@@ -86,6 +104,7 @@
     </div>
   </div>
 
+  <!-- Reviews Section -->
   <div class="review-section">
     <h2>What Our Customers Say....</h2>
     <div class="review-card">
